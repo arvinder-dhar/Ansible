@@ -17,4 +17,6 @@
       name: "httpd"
       state: "started"
       
+---   
+
 ### After that get the public IP of your client M/C or ALL Public IPS since all is mentioned and IP:80 and content should Come
