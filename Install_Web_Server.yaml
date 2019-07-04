@@ -1,0 +1,20 @@
+--- 
+- name: Install Webserver
+  hosts: all
+  tasks: 
+  - name: "Webserver"
+    yum: 
+      name: httpd
+      state: present"
+
+  - name : "Copy Index File"
+    copy:
+      content: "<h1> Website Built By Arvinder </h1>"
+      dest: /var/www/html/index.html
+
+  - name: "Start Service"
+    service:
+      name: "httpd"
+      state: "started"
+      
+### After that get the public IP of your client M/C or ALL Public IPS since all is mentioned and IP:80 and content should Come
